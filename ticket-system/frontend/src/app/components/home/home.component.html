@@ -1,0 +1,34 @@
+<div class="home-container">
+  <div class="hero">
+    <h1>Sistema de Gestión de Tickets</h1>
+    <p>Plataforma para la gestión eficiente de tickets de soporte</p>
+    
+    <div class="cta-buttons" *ngIf="!authService.isLoggedIn">
+      <button class="btn btn-primary" (click)="navigateToLogin()">Iniciar Sesión</button>
+      <button class="btn btn-secondary" (click)="navigateToRegister()">Registrarse</button>
+    </div>
+    
+    <div class="cta-buttons" *ngIf="authService.isLoggedIn">
+      <button class="btn btn-primary" [routerLink]="['/tickets']">Ver Tickets</button>
+      <button class="btn btn-secondary" *ngIf="authService.isAdmin || authService.isDirector" [routerLink]="['/dashboard']">Dashboard</button>
+    </div>
+  </div>
+  
+  <div class="features">
+    <div class="feature">
+      <h3>Gestión de Tickets</h3>
+      <p>Crea y gestiona tickets de soporte de manera eficiente.</p>
+    </div>
+    
+    <div class="feature">
+      <h3>Seguimiento en Tiempo Real</h3>
+      <p>Visualiza el estado de tus tickets en tiempo real.</p>
+    </div>
+    
+    <div class="feature">
+      <h3>Comunicación Efectiva</h3>
+      <p>Añade comentarios y actualizaciones a tus tickets.</p>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,26 @@
+ticket-system/
+├── backend/                 # Django backend
+│   ├── ticketsystem/        # Django project
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── tickets/             # Django app
+│   │   ├── models.py        # Database models
+│   │   ├── views.py         # API views
+│   │   ├── serializers.py   # API serializers
+│   │   └── urls.py          # API endpoints
+│   ├── manage.py
+│   └── requirements.txt     # Python dependencies
+├── frontend/                # Angular frontend
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/  # Angular components
+│   │   │   ├── services/    # Angular services
+│   │   │   ├── models/      # TypeScript interfaces
+│   │   │   └── guards/      # Route guards
+│   │   ├── assets/          # Static assets
+│   │   └── environments/    # Environment configs
+│   ├── package.json
+│   └── angular.json
+└── run.sh                   # Script to run both backend and frontend
+
